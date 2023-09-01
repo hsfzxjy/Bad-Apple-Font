@@ -4,7 +4,9 @@ Playing Bad Apple!! using [HarfBuzz WASM shaper](https://github.com/harfbuzz/har
 
 > **NOTE** [_Valdemar Erk_](https://blog.erk.dev/) is credited as the original proposer of this idea, who wrote the first [blog post](https://blog.erk.dev/posts/anifont/) and uploaded the first [video on Youtube](https://www.youtube.com/watch?v=GF2sn2DXjlA) as demonstration.
 
-[![Watch the video](https://img.youtube.com/vi/qFd8vsr8nag/hqdefault.jpg)](https://www.youtube.com/embed/qFd8vsr8nag)
+[Play on Youtube](https://www.youtube.com/embed/qFd8vsr8nag) | [Play on Bilibili](https://www.bilibili.com/video/BV1SP411Y7Dr)
+
+![](./cover.png)
 
 Some days ago I read a thread titled ["BadAppleFont"](https://blog.erk.dev/posts/anifont/) on [HackerNews](https://news.ycombinator.com/item?id=37317055). The post described an interesting abusement of the experimental [HarfBuzz WASM shaper](https://github.com/harfbuzz/harfbuzz/blob/main/docs/wasm-shaper.md) to play "Bad Apple!!" in theoretically any editable areas. Nonetheless, the post lacked sufficiently specific instructions or code snippets to rebuild the artwork, which is regrettable.
 
