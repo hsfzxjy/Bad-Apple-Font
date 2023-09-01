@@ -6,8 +6,6 @@ download "https://raw.githubusercontent.com/Automattic/node-canvas/master/exampl
     "base.sfd.sha256" \
     "base.sfd"
 
-mkdir svgs -p
-
 export APPIMAGELAUNCHER_DISABLE=1
 
 download "https://github.com/fontforge/fontforge/releases/download/20230101/FontForge-2023-01-01-a1dad3e-x86_64.AppImage" \
