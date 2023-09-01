@@ -16,6 +16,13 @@ This repository aims to offer a pipeline to simplify the replication of the idea
 
 This project has been developed and tested on Ubuntu 20.04 (amd64). While it may function on other platforms, compatibility is not guaranteed.
 
+First, clone this project to your local machine and update all sub-modules:
+
+```bash
+git clone https://github.com/hsfzxjy/Bad-Apple-Font
+git submodule update --init --recursive
+```
+
 Before we start, make sure the following commands are globally available:
 
 ```plaintext
