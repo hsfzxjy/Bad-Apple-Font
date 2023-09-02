@@ -17,9 +17,11 @@ function unicode() {
     python3 -c 'print(chr(0xF0000 + int(__import__("sys").argv[1])),end="")' $1
 }
 
-dryrunable 'for i in $(seq 1 6573); do
-    echo "Processing ${i}.bmp..."
-    "$POTRACE" -s ../02_Extract_Frames/bmps/${i}.bmp -o "svgs/$(unicode $i).svg"
-done'
+dryrunable 'python3 main.py "$POTRACE"'
+
+# dryrunable 'for i in $(seq 1 6573); do
+#     echo "Processing ${i}.bmp..."
+#     "$POTRACE" -s ../02_Extract_Frames/bmps/${i}.bmp -o "svgs/$(unicode $i).svg"
+# done'
 
 echo "Vectorization done."
