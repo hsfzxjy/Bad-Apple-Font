@@ -32,7 +32,7 @@ pub fn shape(
 
         const OFFSET: u32 = 0xF0000;
         const FRAMES: u32 = 6573;
-        const END: u32 = OFFSET + 6537;
+        const END: u32 = OFFSET + FRAMES;
 
         let glyph = if run_length > END {
             "FIN.".to_string()
