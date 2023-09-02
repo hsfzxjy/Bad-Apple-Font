@@ -13,13 +13,14 @@ output_sfd_filename = sys.argv[2]
 svg_filenames = sys.argv[3:]
 
 font = fontforge.open(input_sfd_filename)
+font.removeLookup("'kern' Horizontal Kerning lookup 1")
 
 glyph_count = 0
 for svg_filename in svg_filenames:
     id = int(re.findall(r"(\d+).svg", svg_filename)[0])
     charcode = id + 0xF0000
     glyph = font.createChar(charcode)
-    glyph.glyphname = f"Frame {id}"
+    glyph.glyphname = f"Frame{id}"
     glyph.importOutlines(svg_filename, "correctdir")
     glyph.removeOverlap()
     if glyph.foreground.isEmpty():
