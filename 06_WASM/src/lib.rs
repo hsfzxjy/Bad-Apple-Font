@@ -37,7 +37,7 @@ pub fn shape(
         let glyph = if run_length > END {
             "FIN.".to_string()
         } else {
-            char::from_u32(run_length - 1 + OFFSET).unwrap().to_string()
+            char::from_u32(run_length + OFFSET).unwrap().to_string()
         };
         let before = &str_buf[..first_dot];
         let after = &str_buf[first_dot + (run_length as usize)..];
