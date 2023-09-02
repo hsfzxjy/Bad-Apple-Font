@@ -23,10 +23,10 @@ pub fn shape(
         .group_by(|a, b| a.codepoint == DOT_CODEPOINT && b.codepoint == DOT_CODEPOINT)
         .map(|s| -> Glyph {
             let first = unsafe { s.get_unchecked(0) };
-            debug(&first.codepoint.to_string());
             let mut g = if first.codepoint != DOT_CODEPOINT {
                 first.clone()
             } else {
+                debug(&s.len().to_string());
                 Glyph {
                     codepoint: OFFSET + s.len() as u32,
                     flags: 0,
