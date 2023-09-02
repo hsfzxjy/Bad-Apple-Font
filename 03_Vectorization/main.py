@@ -7,7 +7,7 @@ POTRACE = sys.argv[1]
 
 def worker(i):
     bmp = f"../02_Extract_Frames/bmps/{i}.bmp"
-    svg = f"svgs/{i}.svg"
+    svg = f"svgs/{i:06}.svg"
     print(f"Processing {i}.bmp...")
     subprocess.Popen([POTRACE, "-s", bmp, "-o", svg]).wait()
 
