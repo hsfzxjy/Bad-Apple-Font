@@ -1,6 +1,3 @@
-[submodule "04_Make_Font/fontforge-svg-importer"]
-	path = 04_Make_Font/fontforge-svg-importer
-	url = https://github.com/leifgehrmann/fontforge-svg-importer.git
 [submodule "07_HarfBuzz/harfbuzz"]
 	path = 07_HarfBuzz/harfbuzz
 	url = https://github.com/harfbuzz/harfbuzz

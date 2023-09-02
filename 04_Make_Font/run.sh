@@ -12,8 +12,7 @@ download "https://github.com/fontforge/fontforge/releases/download/20230101/Font
     "fontforge.sha256" \
     "fontforge"
 chmod +x fontforge
-export PATH=$PWD:$PATH
 
-dryrunable 'fontforge-svg-importer/fontforge-svg-importer "$PWD/base.sfd" "$PWD/generated.sfd" $PWD/../03_Vectorization/svgs/*.svg'
+dryrunable './fontforge -lang=py -script $PWD/import_svg.py "$PWD/base.sfd" "$PWD/generated.sfd" $PWD/../03_Vectorization/svgs/*.svg'
 
 echo "SVG files imported."
