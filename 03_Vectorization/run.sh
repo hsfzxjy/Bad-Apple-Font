@@ -13,6 +13,6 @@ if ! available python3; then
     exit 1
 fi
 
-dryrunable 'python3 main.py "$POTRACE"'
+dryrunable 'python3 main.py "$POTRACE"' || exit 1
 
 echo "Vectorization done."

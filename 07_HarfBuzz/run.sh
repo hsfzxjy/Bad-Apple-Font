@@ -9,8 +9,8 @@ MESON="$PWD/meson-1.2.1/meson.py"
 
 cd wasm-micro-runtime
 
-cmake -B build -DWAMR_BUILD_REF_TYPES=1 -DWAMR_BUILD_FAST_JIT=1
-cmake --build build --parallel
+cmake -B build -DWAMR_BUILD_REF_TYPES=1 -DWAMR_BUILD_FAST_JIT=1 || exit 1
+cmake --build build --parallel || exit 1
 
 cd ..
 
@@ -20,13 +20,13 @@ export LD_LIBRARY_PATH="$LIBRARY_PATH"
 
 cd harfbuzz
 
-"$MESON" setup build -Dwasm=enabled
-"$MESON" compile -C build
+"$MESON" setup build -Dwasm=enabled || exit 1
+"$MESON" compile -C build || exit 1
 
 python3 src/addTable.py \
     ../../05_Export_Font/BadApple.ttf \
     ../BadApple_WASM.ttf \
-    ../../06_WASM/pkg/bad_apple_shaper_bg.wasm
+    ../../06_WASM/pkg/bad_apple_shaper_bg.wasm || exit 1
 
 cd ..
 
