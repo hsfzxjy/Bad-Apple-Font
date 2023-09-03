@@ -22,14 +22,3 @@ cd harfbuzz
 
 "$MESON" setup build -Dwasm=enabled || exit 1
 "$MESON" compile -C build || exit 1
-
-python3 src/addTable.py \
-    ../../05_Export_Font/BadApple.ttf \
-    ../BadApple_WASM.ttf \
-    ../../06_WASM/pkg/bad_apple_shaper_bg.wasm || exit 1
-
-cd ..
-
-if [ ! -f "$HOME/.local/share/BadApple_WASM.ttf" ]; then
-    ln -s $PWD/BadApple_WASM.ttf "$HOME/.local/share"
-fi
