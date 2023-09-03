@@ -26,7 +26,7 @@ git submodule update --init --recursive
 Before we start, make sure the following commands are globally available:
 
 ```plaintext
-python3 cmake g++ wget tar ffmpeg cargo
+python3 cmake g++ wget tar ffmpeg cargo rustup
 ```
 
 > **NOTE** This list may not be exhausted. Feel free to contribute if you find something missing.
@@ -41,9 +41,9 @@ The entire build process is partitioned into 7 steps, each corresponding to a di
 - **02_Extract_Frames**: Extract all frames from the video and store as BMP files.
 - **03_Vectorization**: Convert all extracted BMP files into SVG files.
 - **04_Make_Font**: Convert all SVG files into strokes and stuff them into an `.sfd` file.
-- **05_Export_Font**: Build the OpenType font from the `.sfd` file.
-- **06_WASM**: Build the WASM shaper binary (make sure Rust toolchain installed and `cargo` is available).
-- **07_HarfBuzz**: Build a customized copy of `libharfbuzz` to enable experimental WASM shaper.
+- **05_WASM**: Build the WASM shaper binary (make sure Rust toolchain installed and `cargo` is available).
+- **06_HarfBuzz**: Build a customized copy of `libharfbuzz` to enable experimental WASM shaper.
+- **07_Install_Font**: Build the OpenType font from the `.sfd` and `.wasm` file. Install it to `~/.local/share/fonts/`.
 
 To run the above steps in sequence, execute `./make.sh` as follows:
 
