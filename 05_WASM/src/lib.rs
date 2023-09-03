@@ -32,7 +32,7 @@ pub fn shape(
                     flags: 0,
                     x_advance: 0,
                     y_advance: 0,
-                    cluster: 0,
+                    cluster: first.cluster,
                     x_offset: 0,
                     y_offset: 0,
                 }
