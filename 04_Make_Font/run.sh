@@ -13,8 +13,6 @@ download "https://github.com/fontforge/fontforge/releases/download/20230101/Font
     "fontforge"
 chmod +x fontforge
 
-# dryrunable './fontforge -lang=py -script $PWD/import_svg.py "$PWD/base.sfd" "$PWD/generated.sfd" $PWD/../03_Vectorization/svgs/*.svg'
-
 dryrunable 'python3 main.py "$PWD/base.sfd" "$PWD/generated.sfd" $PWD/../03_Vectorization/svgs/*.svg'
 
 echo "SVG files imported."
