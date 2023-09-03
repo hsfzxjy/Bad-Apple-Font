@@ -1,7 +1,6 @@
 #![feature(slice_group_by)]
 
-mod harfbuzz_wasm;
-use crate::harfbuzz_wasm::{debug, Font, Glyph, GlyphBuffer};
+use harfbuzz_wasm::{debug, Font, Glyph, GlyphBuffer};
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
