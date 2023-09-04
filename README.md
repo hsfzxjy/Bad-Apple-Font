@@ -2,6 +2,8 @@
 
 Playing Bad Apple!! using [HarfBuzz WASM shaper](https://github.com/harfbuzz/harfbuzz/blob/main/docs/wasm-shaper.md) within any editable area.
 
+**Check out more abusement of WASM shaper at [hsfzxjy/Harfbuzz-WASM-Fantasy](https://github.com/hsfzxjy/Harfbuzz-WASM-Fantasy)!**
+
 > **NOTE** [_Valdemar Erk_](https://blog.erk.dev/) is credited as the original proposer of this idea, who wrote the first [blog post](https://blog.erk.dev/posts/anifont/) and uploaded the first [video on Youtube](https://www.youtube.com/watch?v=GF2sn2DXjlA) as demonstration.
 
 [Play on Youtube](https://www.youtube.com/embed/qFd8vsr8nag) | [Play on Bilibili](https://www.bilibili.com/video/BV1SP411Y7Dr)
