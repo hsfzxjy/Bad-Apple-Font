@@ -8,6 +8,7 @@ version = "0.1.0"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
+slice-group-by = "0.3.1"
 wasm-bindgen = "0.2.84"
 harfbuzz-wasm = { git = "https://github.com/harfbuzz/harfbuzz-wasm-examples.git", rev = "ec67ff4c1a7fdb815b5f624ef58d094ee9e56f97" }
 

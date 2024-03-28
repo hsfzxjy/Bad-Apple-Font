@@ -1,7 +1,6 @@
-#![feature(slice_group_by)]
-
 use harfbuzz_wasm::{debug, Font, Glyph, GlyphBuffer};
 use wasm_bindgen::prelude::*;
+use slice_group_by::GroupBy;
 
 #[wasm_bindgen]
 pub fn shape(
@@ -19,7 +18,7 @@ pub fn shape(
 
     buffer.glyphs = buffer
         .glyphs
-        .group_by(|a, b| a.codepoint == DOT_CODEPOINT && b.codepoint == DOT_CODEPOINT)
+        .binary_group_by(|a, b| a.codepoint == DOT_CODEPOINT && b.codepoint == DOT_CODEPOINT)
         .map(|s| -> Glyph {
             let first = unsafe { s.get_unchecked(0) };
             let mut g = if first.codepoint != DOT_CODEPOINT {
