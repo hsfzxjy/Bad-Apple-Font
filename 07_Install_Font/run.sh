@@ -20,6 +20,11 @@ cd ../..
 
 DEST="$HOME/.local/share/fonts/"
 
+# Additional script to be compatible to old fonts directories
+if [ ! -d "$DEST" -a -d "$HOME/.fonts/" ]; then
+	DEST="$HOME/.fonts/"
+fi
+
 echo "Installing BadApple_WASM.ttf to $DEST..."
 rm -f "$DEST/BadApple_WASM.ttf"
 ln -s $PWD/BadApple_WASM.ttf "$DEST"
